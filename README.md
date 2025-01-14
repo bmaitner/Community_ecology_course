@@ -1,2 +1,2 @@
 This repo contains materials related to a community ecology course I'm teaching. The course is based on Mittlebach and McGill's Community Ecology textbook (second edition; ISBN: 978-0198835868
-), and so the organization and topics covered are largely taken from that source. Any content here (aside from images that may be license otherwise) should be considered CC-BY, while code is licensed under an MIT license.
+), and so the organization and topics covered are largely taken from that source. Any content here (aside from images that may be licensed otherwise) should be considered CC-BY, while code is licensed under an MIT license.
