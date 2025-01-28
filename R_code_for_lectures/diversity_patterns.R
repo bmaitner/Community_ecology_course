@@ -177,3 +177,13 @@ sp_df %>%
   ggplot(mapping = aes(x=sites,y=richness,color=region))+
   geom_line(lwd=2)
 
+sp_df %>%
+  #filter(region %in% c("A","B"))%>%
+  ggplot(mapping = aes(x=sites,y=richness,color=region))+
+  #geom_point(lwd=2)+
+  geom_smooth(method = "lm")+
+  scale_x_log10()+
+  scale_y_log10()
+
+
+
