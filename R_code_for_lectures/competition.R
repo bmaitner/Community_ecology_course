@@ -117,12 +117,24 @@ data.frame(N2 = 1:100)%>%
 #' @param ai consumption rate of resource
 #' @param di death rate
 #' @param R resource availability
-resource_dep_growth <- function(Ni,ai,di,R){
+resource_dep_growth <- function(ai,di,R){
   
-  dNdt <- Ni*((ai*R)-di)
-  
+  per_capita_growth_rate <- (ai*R)-di
+  return(per_capita_growth_rate)
 }
 
+
+data.frame(R = 1:10000)%>%
+  mutate(pcgr = resource_dep_growth(ai = .1,di = .2,R = R)) %>%
+  ggplot(mapping = aes(x=R,y=pcgr))+
+  geom_line(color="darkblue",linewidth=1)+
+  geom_line(data = data.frame(N2 = 1:100)%>%
+              mutate(N1 = sp2_zngi(k2 = 100,a21 = .3,N2 = N2)),
+            mapping = aes(x=N1,y=N2),
+            color="darkred",
+            linewidth = 1)+
+  xlim(c(0,100))+
+  theme_bw()
 
 
 
