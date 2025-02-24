@@ -40,6 +40,8 @@ data.frame(N2 = 1:100)%>%
   theme_bw()
 
 
+#stable
+
 data.frame(N2 = 1:100)%>%
   mutate(N1 = sp1_zngi(k1 = 20,a12 = .5,N2 = N2)) %>%
   ggplot(mapping = aes(x=N1,y=N2))+
