@@ -94,16 +94,15 @@ set n_turtle_species 0
       ;move-to one-of patches
       setxy random-xcor random-ycor
 
-    ]
+    ] ; end turtle creator
 
          ;print abund
 
+    set n_turtle_species n_turtle_species + 1
 
 ]
 
-    ;create n_indiv turtles
 
-    set n_turtle_species n_turtle_species + 1
   ] ; end turtle making loop
 
 
@@ -163,8 +162,8 @@ end
 GRAPHICS-WINDOW
 252
 19
-579
-347
+611
+379
 -1
 -1
 31.91
@@ -243,7 +242,7 @@ cv_abund
 cv_abund
 0
 5
-0.0
+0.8
 .1
 1
 NIL
@@ -325,7 +324,7 @@ SLIDER
 40
 343
 213
-377
+376
 turtle_size
 turtle_size
 0
@@ -357,7 +356,7 @@ PENS
 @#$#@#$#@
 ## WHAT IS IT?
 
-(a general understanding of what the model is trying to show or explain)
+This simulation is designed to show the connections between the species-area relationship (SAR) and the species-abundance distribution (SAD).
 
 ## HOW IT WORKS
 
@@ -365,7 +364,10 @@ PENS
 
 ## HOW TO USE IT
 
-(how to use the model, including a description of each of the items in the Interface tab)
+The key parameter to explor is "cv_abund" which controls the shape of the SAD. A low CV will result in all species having similar abundances, where a high CV will lead to high asymmetry in species abundances.
+
+Adjust the slider for "cv_abund", and any other sliders you care to, and then press "setup" to add your species (represented by different colored turtles). To simulate sampling, press "go".
+
 
 ## THINGS TO NOTICE
 
@@ -392,7 +394,6 @@ PENS
 (a reference to the model's URL on the web if it has one, as well as any other necessary credits, citations, and links)
 
 ## BUGS TO FIX
-At higher CV abundance levels sometimes not all species are sampled. Need to figure out why this is.
 @#$#@#$#@
 default
 true
