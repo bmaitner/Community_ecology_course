@@ -103,7 +103,8 @@ set n_turtle_species 0
 ]
 
 
-  ] ; end turtle making loop
+  ]
+  ; end turtle making loop
 
 
 end
